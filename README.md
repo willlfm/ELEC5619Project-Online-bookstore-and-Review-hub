@@ -98,22 +98,3 @@ This project delivers a complete full-stack bookstore management platform built 
 
 
 Sandbox URL: https://sandbox.paypal.com
-
-Store account: 
-
-- Client ID: ATqXEU_-wixDaZq64240QLOfyBWBzyYCa8RMEyF-KpBji7tTQsfjnvvPOXA1b3VItY6T3dUQg_RuEf5z
-- Secret: EHblYba_oVz3GR_MqoCh30ZW_77GEOfR09hbkLdQD9VNurcxU14kwczAs0a5sm-Mmo_oM8Ne2Q1U8vfk
-- Email: sb-54352x46747377_api1.business.example.com
-- Password: 1udb>5<Z
-- Name: John Doe
-- Phone: 0366170649
-- Account ID: 7C6NE7NPH8ZCA
-
-
-Client account:
-
-- Email: sb-43ptxq46571772@personal.example.com
-- Password: Qt2/JMo!
-- Name: John Doe
-- Phone: 0363365630
-- Account ID: M3ZXZMJYG4HDG
