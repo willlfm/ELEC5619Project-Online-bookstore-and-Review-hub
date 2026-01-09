@@ -1,0 +1,115 @@
+.checkout-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #000;
+}
+
+.checkout-container h2 {
+    color: #000;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.checkout-sections {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.checkout-left,
+.checkout-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+
+.checkout-left h3,
+.checkout-right h3 {
+    margin-bottom: 15px;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+
+.checkout-left input.checkout-input {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #000;
+}
+
+.checkout-left label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+    font-weight: 500;
+}
+
+
+.order-items {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    background: #fff;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+
+.summary-row span {
+    color: #000;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-row.total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.error-message {
+    color: red;
+    margin: 10px 0;
+}
+
+.paypal-button-container {
+    margin-top: 20px;
+}
+
+.return-home-btn {
+    background-color: #0b1e3f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: block;
+    margin-top: 12px;
+}
+
+.return-home-btn:hover {
+    background-color: #005ecb;
+    transform: translateY(-1px);
+}
+
+.return-home-btn:active {
+    background-color: #004fa3;
+    transform: translateY(0);
+}

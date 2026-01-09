@@ -1,0 +1,104 @@
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-icon:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: scale(1.05);
+}
+
+.cart-icon:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.cart-icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-icon-svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+    transition: color 0.2s ease;
+}
+
+.cart-icon:hover .cart-icon-svg {
+    color: #007bff;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 50%;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 0 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .cart-icon {
+        padding: 6px;
+    }
+    
+    .cart-icon-svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .cart-badge {
+        min-width: 16px;
+        height: 16px;
+        font-size: 10px;
+        top: -6px;
+        right: -6px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .cart-icon:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .cart-icon-svg {
+        color: white;
+    }
+    
+    .cart-icon:hover .cart-icon-svg {
+        color: #4dabf7;
+    }
+}

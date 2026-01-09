@@ -1,0 +1,375 @@
+.book-management {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3.5rem;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #ffffff;
+  background: linear-gradient(180deg, rgba(12, 16, 38, 0.95), rgba(16, 18, 48, 0.92));
+}
+
+.book-management header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.book-management header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.book-management header p {
+  margin: 0;
+  color: #eef3ff;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+}
+
+.format-section {
+  margin-top: 1.75rem;
+  background: #f8f9ff;
+  padding: 1.25rem 1rem;
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 1px rgba(99, 102, 241, 0.12);
+}
+
+.format-toggle {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+  color: #111827;
+  font-weight: 600;
+}
+
+.format-toggle input {
+  margin-right: 0.4rem;
+}
+
+.format-toggle label {
+  cursor: pointer;
+}
+
+.formats-grid.single {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.file-upload-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.upload-button {
+  padding: 0.55rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.upload-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
+}
+
+.hidden-file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.admin-back-button {
+  align-self: flex-start;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #00e5ff, #76ff03);
+  color: #041026;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(118, 255, 3, 0.35);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.admin-back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(118, 255, 3, 0.45);
+}
+
+.flash-message {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 193, 7, 0.18);
+  color: #8a5300;
+}
+
+.book-form {
+  background: #fff;
+  border-radius: 22px;
+  padding: 2rem;
+  box-shadow: 0 20px 36px rgba(16, 23, 71, 0.08);
+  margin-bottom: 2.5rem;
+}
+
+.book-form h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.book-form .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.book-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #3a3a55;
+}
+
+.book-form input,
+.book-form textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  border: 1px solid #d7d8f8;
+  background: #f7f7ff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 150ms ease, background 150ms ease;
+}
+
+.book-form textarea {
+  resize: vertical;
+}
+
+.book-form input:focus,
+.book-form textarea:focus {
+  background: #fff;
+  border-color: #6c5ce7;
+}
+
+.formats {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.formats h3 {
+  margin: 0 0 0.75rem;
+}
+
+.formats-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-actions {
+  margin-top: 1.75rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.form-actions .primary {
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #ff6f61, #ff9472);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-actions .link {
+  border: none;
+  background: none;
+  color: #5b5b7a;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.book-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 36px rgba(27, 21, 81, 0.08);
+}
+
+.book-table th,
+.book-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid #ececfd;
+}
+
+.book-table th {
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #111827;
+}
+
+.book-table .muted {
+  display: block;
+  color: #4b5563;
+  font-size: 0.8rem;
+}
+
+.formats-cell {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.format-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #eef0ff;
+  color: #3f51b5;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
+.format-file-tag {
+  font-size: 0.75rem;
+  color: #2563eb;
+  word-break: break-all;
+  max-width: 240px;
+}
+
+.badge em {
+  font-style: normal;
+  color: #1f1f2e;
+}
+
+.book-table .actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.book-table .actions button {
+  border: none;
+  padding: 0.45rem 0.9rem;
+  border-radius: 10px;
+  background: #eef0ff;
+  color: #4338ca;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.book-table .actions .danger {
+  background: rgba(255, 99, 132, 0.18);
+  color: #a12238;
+}
+
+.book-table .empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #777799;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 1rem 0;
+  color: #525274;
+}
+
+.pagination button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: #edf1ff;
+  color: #3f51b5;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pagination button:disabled {
+  background: #f3f4ff;
+  color: #9a9ab5;
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .book-management {
+    padding: 1.75rem 1rem 3rem;
+  }
+
+  .book-table .actions {
+    flex-direction: column;
+  }
+}
+
+.file-name {
+  display: block;
+  font-size: 0.85rem;
+  color: #1f2937;
+}
+
+.book-form,
+.book-form label,
+.book-form input,
+.book-form select,
+.book-form textarea,
+.book-form h3 {
+  color: #111827;
+}
+
+.book-form input,
+.book-form select,
+.book-form textarea {
+  color: #111827;
+}
+
+.book-table th,
+.book-table td,
+.book-table strong,
+.book-table .muted {
+  color: #111827;
+}
+
+.book-table .muted {
+  color: #4b5563;
+}

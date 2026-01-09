@@ -1,0 +1,400 @@
+.order-management {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3.5rem;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #ffffff;
+  background: linear-gradient(180deg, rgba(12, 16, 38, 0.95), rgba(16, 18, 48, 0.92));
+}
+
+.order-management header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+}
+
+.admin-back-button {
+  align-self: flex-start;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #00e5ff, #76ff03);
+  color: #041026;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(118, 255, 3, 0.35);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.admin-back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(118, 255, 3, 0.45);
+}
+
+.order-management h1 {
+  margin: 0 0 0.6rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.order-management header p {
+  margin: 0;
+  max-width: 560px;
+  color: #eef3ff;
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #3f3f5a;
+}
+
+.filters select {
+  min-width: 180px;
+  padding: 0.65rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid #d6d6f4;
+  background: #f6f6ff;
+  color: #111827;
+}
+
+.flash-message {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: rgba(129, 236, 236, 0.22);
+  color: #0b7285;
+}
+
+.order-table th,
+.order-table td,
+.order-table strong,
+.order-table .muted {
+  color: #111827;
+}
+
+.order-table .muted {
+  color: #4b5563;
+}
+
+.order-table select,
+.order-table button {
+  color: #111827;
+}
+
+.shipping span,
+.items span {
+  color: #111827;
+}
+
+/* ================== TABLE STYLES ================== */
+
+.order-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 36px rgba(27, 21, 81, 0.08);
+}
+
+.order-table th,
+.order-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid #ececfd;
+  /* Ensure all cells align to the top for consistency */
+  vertical-align: top;
+}
+
+.order-table th {
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #111827;
+}
+
+.order-table .muted {
+  display: block;
+  color: #4b5563;
+  font-size: 0.75rem;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #eef0ff;
+  color: #3f51b5;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.status-completed {
+  background: rgba(76, 201, 240, 0.22);
+  color: #0b7285;
+}
+
+.status-cancelled {
+  background: rgba(255, 99, 132, 0.18);
+  color: #a12238;
+}
+
+/* Shipping and Items display blocks */
+.shipping {
+  font-size: 0.85rem;
+}
+.shipping span {
+  display: block;
+}
+.shipping span + span {
+  margin-top: 0.2rem;
+}
+
+.items {
+  font-size: 0.85rem;
+}
+.items span {
+  display: block;
+}
+.items span + span {
+  margin-top: 0.3rem;
+}
+
+/* ================== REFUND INFO COLUMN (NEW) ================== */
+
+/* Targeting the Refund Info column (7th column) */
+.order-table th:nth-child(7),
+.order-table td:nth-child(7) {
+  /* Center align the Refund Info column */
+  text-align: center;
+  vertical-align: top;
+  min-width: 120px;
+}
+
+/* Show Reason Button Style (Modified for Rounded Rectangles) */
+.refund-info .reason-btn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  /* Apply consistent border-radius for rounded rectangles */
+  border-radius: 6px;
+
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s;
+
+  /* Use info color */
+  background-color: #e6f7ff;
+  color: #0050b3;
+}
+
+.refund-info .reason-btn:hover:not(:disabled) {
+  background-color: #bae7ff;
+}
+
+/* ================== ACTIONS COLUMN & REFUND BUTTONS ================== */
+
+.order-table .actions {
+  vertical-align: top;
+  min-width: 180px;
+}
+
+.order-table .actions select {
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #d6d6f4;
+  background: #f6f6ff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.refund-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+/* Common style for Approve/Reject buttons */
+.refund-buttons button {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  /* Apply consistent border-radius for rounded rectangles */
+  border-radius: 6px;
+
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* --- Disabled Button General Style --- */
+.refund-buttons button:disabled,
+.refund-info .reason-btn:disabled {
+  /* Set a neutral gray background */
+  background-color: #e0e0e0;
+  /* Set a darker gray text color */
+  color: #888888;
+  /* Remove pointer */
+  cursor: not-allowed;
+  /* Reduce opacity slightly */
+  opacity: 0.8;
+  /* Ensure border-radius remains */
+  border-radius: 6px;
+}
+
+/* Ensure disabled buttons don't change color on hover */
+.refund-buttons button:disabled:hover,
+.refund-info .reason-btn:disabled:hover {
+  background-color: #e0e0e0;
+  color: #888888;
+}
+
+.approve-btn {
+  background-color: #d4edda;
+  color: #155724;
+}
+.approve-btn:hover {
+  background-color: #c3e6cb;
+}
+
+.reject-btn {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+.reject-btn:hover {
+  background-color: #f5c6cb;
+}
+
+
+/* ================== REFUND REASON MODAL STYLES ================== */
+
+.refund-reason-modal {
+  /* Key styles: fixed position, full screen overlay */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Semi-transparent black background */
+  background-color: rgba(0, 0, 0, 0.6);
+
+  /* Center the modal content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Ensure it's above everything else */
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+}
+
+.modal-content h2 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  /* Allows line breaks and preserves formatting */
+  white-space: pre-wrap;
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.modal-content .close-btn {
+  /* Style consistency with table buttons */
+  float: right;
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Primary blue color */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Slightly more rounded than table buttons */
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.modal-content .close-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* ================== OTHER & MEDIA QUERIES ================== */
+
+.order-table .empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #777799;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 1rem 0;
+  color: #525274;
+}
+
+.pagination button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: #edf1ff;
+  color: #3f51b5;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pagination button:disabled {
+  background: #f3f4ff;
+  color: #9a9ab5;
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .order-management {
+    padding: 1.75rem 1rem 3rem;
+  }
+
+  .order-table .actions select {
+    width: 100%;
+  }
+
+  .refund-buttons {
+    flex-direction: column;
+  }
+}

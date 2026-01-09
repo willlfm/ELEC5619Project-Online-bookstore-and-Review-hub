@@ -1,0 +1,188 @@
+.oh-container {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.oh-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.oh-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.oh-link {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+.oh-link:hover {
+    background-color: #f6f8fa;
+    color: #7c3aed;
+    text-decoration: none;
+}
+.oh-link.as-button {
+  color: inherit;
+  padding: 4px 6px;
+}
+
+.oh-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  background: #fff;
+}
+
+.oh-error {
+  color: #b91c1c;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+
+.oh-table-wrap {
+  overflow: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.oh-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.oh-table thead th {
+  position: sticky;
+  top: 0;
+  background: #f9fafb;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.oh-row td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: top;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.oh-addr {
+  min-width: 200px;
+}
+
+.oh-status {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+}
+
+.oh-status.pending { background: #fff7ed; border-color: #fde68a; }
+.oh-status.paid { background: #ecfdf5; border-color: #a7f3d0; }
+.oh-status.shipped { background: #eff6ff; border-color: #bfdbfe; }
+.oh-status.completed { background: #f0fdf4; border-color: #bbf7d0; }
+.oh-status.cancelled, .oh-status.canceled { background: #fef2f2; border-color: #fecaca; }
+
+.oh-items-cell {
+  padding: 12px 12px 16px 12px;
+  background: #fcfcfd;
+}
+
+.oh-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.oh-item {
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  width: 100%;
+}
+
+.oh-item-title {
+  font-weight: 600;
+}
+
+.oh-dot::after {
+  content: "•";
+  margin: 0 6px;
+  color: #94a3b8;
+}
+
+.oh-subtle {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.oh-button {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.oh-button:hover {
+  background: #f9fafb;
+}
+
+.oh-btn-refund {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.oh-btn-refund:hover {
+  filter: brightness(1.05);
+  }
+
+.oh-table,
+.oh-table th,
+.oh-table td,
+.oh-items-cell,
+.oh-items,
+.oh-item,
+.oh-item *,
+.oh-addr,
+.oh-status,
+.oh-card {
+  color: #111827 !important;
+}

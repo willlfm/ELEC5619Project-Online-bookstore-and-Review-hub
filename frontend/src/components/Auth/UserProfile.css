@@ -1,0 +1,187 @@
+.up-wrapper {
+  max-width: 1040px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.up-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+
+.up-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.up-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.up-avatar {
+  width: 164px;
+  height: 164px;
+  border-radius: 50%;
+  background: #f2f3f5;
+  border: 2px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  font-weight: 700;
+  color: #374151;
+  user-select: none;
+}
+
+.up-right {
+  min-width: 0;
+}
+
+.up-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.up-label {
+  font-weight: 600;
+  font-size: 15px;
+  color: #000000;
+  white-space: nowrap;
+  padding: 4px 0;
+  line-height: 1.5;
+}
+
+.up-value {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  color: #111827;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 4px 8px;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+}
+
+.up-value:empty::before {
+   content: " ";
+   visibility: hidden;
+ }
+
+.up-loading {
+  padding: 24px;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .up-card {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .up-left {
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  .up-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .up-label { font-weight: 700; }
+
+}
+
+.up-actions {
+  margin-top: 4px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.up-edit-btn,
+.up-orderhistory-btn,
+.up-refundhistory-btn,
+.up-myebook-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+
+  padding: 8px 12px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.up-edit-btn:hover {
+    background-color: #f6f8fa;
+    color: #7c3aed;
+    text-decoration: none;
+}
+
+.up-orderhistory-btn:hover {
+    background-color: #f6f8fa;
+    color: #7c3aed;
+    text-decoration: none;
+}
+
+.up-refundhistory-btn:hover {
+    background-color: #f6f8fa;
+    color: #7c3aed;
+    text-decoration: none;
+}
+
+.up-myebook-btn:hover {
+    background-color: #f6f8fa;
+    color: #7c3aed;
+    text-decoration: none;
+}
+
+
+.back-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.link {
+    color: #007bff;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 6px 10px;
+    border: 1px solid #007bff;
+    border-radius: 6px;
+    transition: all 0.2s;
+    background: #fff;
+}
+
+.link:hover {
+    background-color: #f6f8fa;
+    color: #7c3aed;
+    text-decoration: none;
+}

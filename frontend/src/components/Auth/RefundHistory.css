@@ -1,0 +1,159 @@
+
+.rh-container {
+ max-width: 1100px;
+ margin: 24px auto;
+ padding: 0 16px;
+}
+
+.rh-header {
+ display: flex;
+ align-items: baseline;
+ justify-content: space-between;
+ gap: 12px;
+ margin-bottom: 16px;
+}
+
+.rh-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.rh-link {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.rh-link:hover {
+  background-color: #f6f8fa;
+  color: #7c3aed;
+  text-decoration: none;
+}
+
+.rh-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  background: #fff;
+}
+
+.rh-error {
+  color: #b91c1c;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+
+.rh-table-wrap {
+  overflow: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.rh-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.rh-table thead th {
+  position: sticky;
+  top: 0;
+  background: #f9fafb;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.rh-row td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: top;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.rh-ellipsis {
+  max-width: 360px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rh-status {
+  display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px;
+  border: 1px solid #e5e7eb; background: #f8fafc;
+}
+
+.rh-status.pending {
+  background: #fff7ed;
+  border-color: #fde68a;
+}
+
+.rh-status.approved {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+}
+
+.rh-status.rejected {
+  background: #fee2e2;
+  border-color: #fecaca;
+}
+
+.rh-status.cancelled, .rh-status.canceled {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.rh-button {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.rh-button:hover {
+  background: #f9fafb;
+}
+
+.rh-btn-cancel {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background: #fff;
+}
+
+.rh-btn-cancel[disabled] {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.rh-btn-cancel:hover:not([disabled]) {
+  filter: brightness(1.05);
+}
+
+.rh-table, .rh-table th, .rh-table td, .rh-status {
+  color: #111827 !important;
+}
+
+.rh-card {
+  color: #111827;
+}

@@ -1,0 +1,482 @@
+.reservation-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.reservation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.reservation-header h1 {
+  font-size: 32px;
+  color: #333;
+}
+
+.back-button {
+  padding: 10px 20px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
+
+.reservation-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.tab-button {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  transition: all 0.3s;
+}
+
+.tab-button.active {
+  color: #4CAF50;
+  border-bottom-color: #4CAF50;
+  font-weight: 600;
+}
+
+.tab-button:hover {
+  color: #4CAF50;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border-left: 4px solid #c62828;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-state p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.primary-button {
+  padding: 12px 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.primary-button:hover {
+  background-color: #45a049;
+}
+
+/* My Reservations */
+.reservations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.reservation-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.reservation-book-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.reservation-details h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.reservation-details p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #666;
+}
+
+.reservation-expiry {
+  color: #ff5722 !important;
+  font-weight: 500;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.status-reserved {
+  background-color: rgba(33, 150, 243, 0.18);
+  color: #1565c0;
+}
+
+.status-badge.status-picked {
+  background-color: rgba(156, 39, 176, 0.18);
+  color: #6a1b9a;
+}
+
+.status-badge.status-reservation_cancelled {
+  background-color: rgba(244, 67, 54, 0.18);
+  color: #c62828;
+}
+
+.status-badge.status-warning {
+  background-color: rgba(255, 152, 0, 0.18);
+  color: #e65100;
+}
+
+.status-badge.status-returned {
+  background-color: rgba(76, 175, 80, 0.18);
+  color: #2e7d32;
+}
+
+/* Legacy status for backwards compatibility */
+.status-badge.active {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.cancel-button {
+  margin-top: auto;
+  padding: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.cancel-button:hover {
+  background-color: #d32f2f;
+}
+
+/* New Reservation */
+.new-reservation {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.selected-book-info {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #4CAF50;
+}
+
+.selected-book-info h3 {
+  margin-top: 0;
+  color: #4CAF50;
+}
+
+.book-preview {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.book-preview-cover {
+  width: 80px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-preview h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.book-preview p {
+  margin: 5px 0 0 0;
+  color: #666;
+  font-style: italic;
+}
+
+.reservation-info {
+  background-color: #e3f2fd;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #2196F3;
+}
+
+.reservation-info h3 {
+  margin-top: 0;
+  color: #1976d2;
+}
+
+.reservation-info ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.reservation-info li {
+  margin: 8px 0;
+  color: #424242;
+}
+
+.reservation-form {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-section h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.date-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.date-button {
+  padding: 15px;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.date-button:hover:not(.disabled) {
+  border-color: #4CAF50;
+  background-color: #f1f8f4;
+}
+
+.date-button.selected {
+  border-color: #4CAF50;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.date-button.disabled {
+  background-color: #f5f5f5;
+  color: #bbb;
+  cursor: not-allowed;
+  border-color: #e0e0e0;
+}
+
+.timeslot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.timeslot-button {
+  padding: 12px;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.timeslot-button:hover {
+  border-color: #4CAF50;
+  background-color: #f1f8f4;
+}
+
+.timeslot-button.selected {
+  border-color: #4CAF50;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.no-slots {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+  font-style: italic;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.submit-button {
+  padding: 15px 50px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Success Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #4CAF50;
+  font-size: 28px;
+  text-align: center;
+}
+
+.modal-body {
+  margin: 25px 0;
+}
+
+.success-message {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.reminder-box {
+  background-color: #fff3cd;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+}
+
+.reminder-box p {
+  margin: 8px 0;
+  color: #856404;
+}
+
+.highlight-text {
+  font-weight: 600;
+  color: #d32f2f;
+  font-size: 16px;
+}
+
+.modal-footer {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.modal-close-button {
+  padding: 12px 40px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.modal-close-button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .reservation-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .reservations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .date-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timeslot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+

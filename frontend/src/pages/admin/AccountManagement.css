@@ -1,0 +1,295 @@
+.account-management {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3.5rem;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #ffffff;
+  background: linear-gradient(180deg, rgba(12, 16, 38, 0.95), rgba(16, 18, 48, 0.92));
+}
+
+.account-management header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+}
+
+.admin-back-button {
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #00e5ff, #76ff03);
+  color: #041026;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(118, 255, 3, 0.35);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.admin-back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(118, 255, 3, 0.45);
+}
+
+.account-management h1 {
+  margin: 0 0 0.75rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.account-management header p {
+  margin: 0;
+  max-width: 520px;
+  color: #f0f4ff;
+}
+
+.search-field input {
+  min-width: 190px;
+  width: 190px;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #d6d6f4;
+  background: #f6f6ff;
+  font-size: 0.9rem;
+  color: #111827;
+}
+
+.flash-message {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: rgba(76, 201, 240, 0.15);
+  color: #04567c;
+}
+
+.account-form,
+.account-form label,
+.account-form input,
+.account-form select,
+.account-form textarea,
+.account-form h2 {
+  color: #111827;
+}
+
+.account-form input,
+.account-form select,
+.account-form textarea {
+  color: #111827;
+}
+
+.account-table th,
+.account-table td,
+.account-table strong,
+.account-table .muted {
+  color: #111827;
+}
+
+.account-table .muted {
+  color: #4b5563;
+}
+
+.account-form {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 20px 38px rgba(19, 18, 66, 0.08);
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.account-form h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.account-form .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.account-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #3a3a55;
+}
+
+.account-form input,
+.account-form select {
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  border: 1px solid #d7d8f8;
+  background: #f7f7ff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 150ms ease, background 150ms ease;
+}
+
+.account-form input:focus,
+.account-form select:focus {
+  background: #fff;
+  border-color: #6c5ce7;
+}
+
+.field-error {
+  font-size: 0.75rem;
+  color: #d93025;
+}
+
+.form-actions {
+  margin-top: 1.75rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.form-actions .primary {
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #4d5ef6, #7c5dfa);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-actions .link {
+  background: none;
+  border: none;
+  color: #5b5b7a;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.account-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 36px rgba(27, 21, 81, 0.08);
+}
+
+.account-table th,
+.account-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid #ececfd;
+}
+
+.account-table th {
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #111827;
+}
+
+.account-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.account-table strong {
+  display: block;
+  font-weight: 600;
+}
+
+.account-table .muted {
+  display: block;
+  color: #4b5563;
+  font-size: 0.8rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(76, 201, 240, 0.18);
+  color: #07637f;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-admin {
+  background: rgba(108, 92, 231, 0.18);
+  color: #3d2f8a;
+}
+
+.account-table .actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.account-table .actions button {
+  border: none;
+  padding: 0.45rem 0.9rem;
+  border-radius: 10px;
+  background: #eef0ff;
+  color: #4338ca;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.account-table .actions .danger {
+  background: rgba(255, 99, 132, 0.18);
+  color: #a12238;
+}
+
+.account-table .empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #777799;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 1rem 0;
+  color: #525274;
+}
+
+.pagination button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: #edf1ff;
+  color: #3f51b5;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pagination button:disabled {
+  background: #f3f4ff;
+  color: #9a9ab5;
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .account-management {
+    padding: 1.75rem 1rem 3rem;
+  }
+
+  .account-form .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account-table .actions {
+    flex-direction: column;
+  }
+}

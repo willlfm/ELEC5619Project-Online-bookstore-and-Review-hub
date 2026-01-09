@@ -1,0 +1,257 @@
+.comment-management {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3.5rem;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #ffffff;
+  background: linear-gradient(180deg, rgba(12, 16, 38, 0.95), rgba(16, 18, 48, 0.92));
+}
+
+.comment-management header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.admin-back-button {
+  align-self: flex-start;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #00e5ff, #76ff03);
+  color: #041026;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(118, 255, 3, 0.35);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.admin-back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(118, 255, 3, 0.45);
+}
+
+.comment-management h1 {
+  margin: 0 0 0.6rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.comment-management header p {
+  margin: 0;
+  max-width: 560px;
+  color: #eef3ff;
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #3f3f5a;
+}
+
+.filters select {
+  min-width: 180px;
+  padding: 0.65rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid #d6d6f4;
+  background: #f6f6ff;
+  color: #111827;
+}
+
+.flash-message {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: rgba(129, 236, 236, 0.22);
+  color: #0b7285;
+}
+
+.comment-editor,
+.comment-editor label,
+.comment-editor textarea,
+.comment-editor select,
+.comment-editor h2 {
+  color: #111827;
+}
+
+.comment-editor textarea,
+.comment-editor select {
+  color: #111827;
+}
+
+.comment-table th,
+.comment-table td,
+.comment-table .muted,
+.comment-table strong {
+  color: #111827;
+}
+
+.comment-table .muted {
+  color: #4b5563;
+}
+
+.comment-editor {
+  background: #fff;
+  border-radius: 22px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 20px 40px rgba(19, 18, 66, 0.08);
+}
+
+.comment-editor h2 {
+  margin-top: 0;
+}
+
+.comment-editor label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #3a3a55;
+}
+
+.comment-editor select,
+.comment-editor textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  border: 1px solid #d7d8f8;
+  background: #f7f7ff;
+  font-size: 0.95rem;
+}
+
+.comment-editor textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.form-actions .primary {
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #6c5ce7, #8e2de2);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-actions .link {
+  border: none;
+  background: none;
+  color: #5b5b7a;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.comment-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 36px rgba(27, 21, 81, 0.08);
+}
+
+.comment-table th,
+.comment-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid #ececfd;
+}
+
+.comment-table th {
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #111827;
+}
+
+.comment-table .muted {
+  display: block;
+  color: #4b5563;
+  font-size: 0.75rem;
+}
+
+.rating {
+  display: inline-block;
+  color: #ffb400;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.comment-cell {
+  max-width: 320px;
+  line-height: 1.4;
+  color: #3d3d5c;
+}
+
+.comment-table .actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.comment-table .actions button {
+  border: none;
+  padding: 0.45rem 0.9rem;
+  border-radius: 10px;
+  background: #eef0ff;
+  color: #4338ca;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.comment-table .actions .danger {
+  background: rgba(255, 99, 132, 0.18);
+  color: #a12238;
+}
+
+.comment-table .empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #777799;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 1rem 0;
+  color: #525274;
+}
+
+.pagination button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: #edf1ff;
+  color: #3f51b5;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pagination button:disabled {
+  background: #f3f4ff;
+  color: #9a9ab5;
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .comment-management {
+    padding: 1.75rem 1rem 3rem;
+  }
+
+  .comment-table .actions {
+    flex-direction: column;
+  }
+}

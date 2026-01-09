@@ -1,0 +1,266 @@
+.reservation-management {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3.5rem;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #ffffff;
+  background: linear-gradient(180deg, rgba(12, 16, 38, 0.95), rgba(16, 18, 48, 0.92));
+}
+
+.reservation-management header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.admin-back-button {
+  align-self: flex-start;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #00e5ff, #76ff03);
+  color: #041026;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(118, 255, 3, 0.35);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.admin-back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(118, 255, 3, 0.45);
+}
+
+.reservation-management header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+}
+
+.reservation-management h1 {
+  margin: 0 0 0.6rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.reservation-management header p {
+  margin: 0;
+  max-width: 560px;
+  color: #eef3ff;
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #3f3f5a;
+}
+
+.filters select {
+  min-width: 180px;
+  padding: 0.65rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid #d6d6f4;
+  background: #f6f6ff;
+  color: #111827;
+}
+
+.flash-message {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: rgba(129, 236, 236, 0.22);
+  color: #0b7285;
+}
+
+.reservation-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 36px rgba(27, 21, 81, 0.08);
+}
+
+.reservation-table th,
+.reservation-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid #ececfd;
+  color: #111827;
+}
+
+.reservation-table th {
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #111827;
+}
+
+.reservation-table .muted {
+  display: block;
+  color: #4b5563;
+  font-size: 0.75rem;
+}
+
+.book-info {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.book-thumbnail {
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-info div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.schedule .expiry {
+  color: #ff6b6b;
+  font-weight: 500;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.status-active {
+  background: rgba(76, 175, 80, 0.18);
+  color: #2e7d32;
+}
+
+.status-reserved {
+  background: rgba(33, 150, 243, 0.18);
+  color: #1565c0;
+}
+
+.status-picked {
+  background: rgba(156, 39, 176, 0.18);
+  color: #6a1b9a;
+}
+
+.status-reservation_cancelled {
+  background: rgba(244, 67, 54, 0.18);
+  color: #c62828;
+}
+
+.status-warning {
+  background: rgba(255, 152, 0, 0.18);
+  color: #e65100;
+}
+
+.status-returned {
+  background: rgba(76, 175, 80, 0.18);
+  color: #2e7d32;
+}
+
+.status-select {
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #d6d6f4;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.status-select.status-reserved {
+  background: rgba(33, 150, 243, 0.18);
+  color: #1565c0;
+  border-color: #1565c0;
+}
+
+.status-select.status-picked {
+  background: rgba(156, 39, 176, 0.18);
+  color: #6a1b9a;
+  border-color: #6a1b9a;
+}
+
+.status-select.status-reservation_cancelled {
+  background: rgba(244, 67, 54, 0.18);
+  color: #c62828;
+  border-color: #c62828;
+}
+
+.status-select.status-warning {
+  background: rgba(255, 152, 0, 0.18);
+  color: #e65100;
+  border-color: #e65100;
+}
+
+.status-select.status-returned {
+  background: rgba(76, 175, 80, 0.18);
+  color: #2e7d32;
+  border-color: #2e7d32;
+}
+
+.status-select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #f5f5f5;
+}
+
+.reservation-table .empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #777799;
+}
+
+@media (max-width: 768px) {
+  .reservation-management {
+    padding: 1.75rem 1rem 3rem;
+  }
+
+  .reservation-table th,
+  .reservation-table td {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .book-thumbnail {
+    width: 40px;
+    height: 56px;
+  }
+
+  .status-select {
+    width: 100%;
+  }
+}
