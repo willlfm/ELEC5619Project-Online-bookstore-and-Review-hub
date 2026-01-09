@@ -25,6 +25,10 @@ public class BookRecommendationServiceImpl implements BookRecommendationService 
     private final UserRepository userRepository;
     private final RedisTemplate<String, Object> redisTemplate;
 
+    private static final double USER_PROFILE_WEIGHT = 0.5;
+    private static final double COLLABORATIVE_WEIGHT = 0.4;
+    private static final double TOP_RATED_WEIGHT = 0.1;
+
     @Autowired
     public BookRecommendationServiceImpl(
             ReviewRepository reviewRepository,
@@ -38,6 +42,7 @@ public class BookRecommendationServiceImpl implements BookRecommendationService 
         this.redisTemplate = redisTemplate;
     }
 
+    @Override
     public List<Book> recommendForUser(String username) {
 
         User user = userRepository.findByUsername(username).orElseThrow();
@@ -49,48 +54,39 @@ public class BookRecommendationServiceImpl implements BookRecommendationService 
             return (List<Book>) list;
         }
 
-        // 1. 用户画像
+        Map<Long, Double> bookScoreMap = new HashMap<>();
+
+        // 1️⃣ 用户画像
         List<Review> myReviews = reviewRepository.findByUserId(Long.valueOf(userId));
-        if (myReviews.isEmpty()) {
-            return fallbackTopRated(cacheKey);
+        for (Review r : myReviews) {
+            bookScoreMap.merge(r.getBookId(), USER_PROFILE_WEIGHT * r.getRating(), Double::sum);
         }
 
-        List<Long> myBookIds = myReviews.stream()
-                .map(Review::getBookId)
-                .toList();
-
-        // 2. 协同过滤
-        List<Review> similarReviews =
-                reviewRepository.findSimilarUsersHighRatingReviews(
-                        myBookIds, userId, 4
-                );
-
-        if (similarReviews.isEmpty()) {
-            return fallbackTopRated(cacheKey);
+        // 2️⃣ 协同过滤
+        List<Long> myBookIds = myReviews.stream().map(Review::getBookId).toList();
+        List<Review> similarReviews = reviewRepository.findSimilarUsersHighRatingReviews(
+                myBookIds, userId, 4
+        );
+        for (Review r : similarReviews) {
+            bookScoreMap.merge(r.getBookId(), COLLABORATIVE_WEIGHT, Double::sum);
         }
 
-        // 3. 聚合评分
-        Map<Long, Long> scoreMap =
-                similarReviews.stream()
-                        .collect(Collectors.groupingBy(
-                                Review::getBookId,
-                                Collectors.counting()
-                        ));
+        // 3️⃣ 获取数据库里所有书
+        List<Book> allBooks = bookRepository.findAll();
 
-        List<Integer> bookIds =
-                scoreMap.entrySet().stream()
-                        .sorted(Map.Entry.<Long, Long>comparingByValue().reversed())
-                        .limit(12)
-                        .map(e -> e.getKey().intValue())
-                        .toList();
-
-        List<Book> books = bookRepository.findByBookIdIn(bookIds);
+        // 4️⃣ 按推荐权重排序，未推荐的书权重为 0
+        allBooks.sort((b1, b2) -> {
+            double score1 = bookScoreMap.getOrDefault(b1.getBookId().longValue(), 0.0);
+            double score2 = bookScoreMap.getOrDefault(b2.getBookId().longValue(), 0.0);
+            return Double.compare(score2, score1); // 倒序，推荐分高的排前
+        });
 
         redisTemplate.opsForValue()
-                .set(cacheKey, books, Duration.ofMinutes(10));
+                .set(cacheKey, allBooks, Duration.ofMinutes(10));
 
-        return books;
+        return allBooks;
     }
+
 
     public List<Book> fallbackTopRated(String cacheKey) {
         List<Long> bookIds =
