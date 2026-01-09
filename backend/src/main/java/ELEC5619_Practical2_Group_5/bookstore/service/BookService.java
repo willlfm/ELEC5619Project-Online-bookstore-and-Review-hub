@@ -1,6 +1,7 @@
 package ELEC5619_Practical2_Group_5.bookstore.service;
 
 import ELEC5619_Practical2_Group_5.bookstore.entity.Book;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.data.domain.Page;
 
 public interface BookService {
@@ -16,6 +17,8 @@ public interface BookService {
     Book getBookByIsbn(String isbn);
 
     Page<Book> getAllBooks(int page, int size);
+
+    Page<Book> getRecommendedBooks(String username, int page, int size);
 
     Page<Book> searchBooksByTitle(String keyword, int page, int size);
 

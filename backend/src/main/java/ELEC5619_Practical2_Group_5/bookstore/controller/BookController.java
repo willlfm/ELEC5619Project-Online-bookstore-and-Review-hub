@@ -1,7 +1,9 @@
 package ELEC5619_Practical2_Group_5.bookstore.controller;
 
+import ELEC5619_Practical2_Group_5.bookstore.config.JwtUtils;
 import ELEC5619_Practical2_Group_5.bookstore.entity.Book;
 import ELEC5619_Practical2_Group_5.bookstore.service.BookService;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
@@ -13,13 +15,34 @@ import org.springframework.web.bind.annotation.*;
 public class BookController {
 
     private final BookService bookService;
+    private final JwtUtils jwtUtils;
+
+//    @GetMapping
+//    public ResponseEntity<Page<Book>> getAllBooks(
+//            @RequestParam(defaultValue = "0") int page,
+//            @RequestParam(defaultValue = "12") int size) {
+//        return ResponseEntity.ok(bookService.getAllBooks(page, size));
+//    }
 
     @GetMapping
     public ResponseEntity<Page<Book>> getAllBooks(
             @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "12") int size) {
-        return ResponseEntity.ok(bookService.getAllBooks(page, size));
+            @RequestParam(defaultValue = "12") int size,
+            HttpServletRequest request
+    ) {
+        String username = jwtUtils.extractUsernameFromRequest(request);
+
+        if (username == null) {
+            return ResponseEntity.ok(bookService.getAllBooks(page, size));
+        }
+
+        return ResponseEntity.ok(
+                bookService.getRecommendedBooks(username, page, size)
+        );
     }
+
+
+
 
     @GetMapping("/{id}")
     public ResponseEntity<Book> getBookById(@PathVariable Integer id) {
